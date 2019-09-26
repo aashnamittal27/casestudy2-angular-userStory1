@@ -1,0 +1,59 @@
+<!-- <li class="list-group-item">
+  <img [src]="message.avatar" class="avatar"/>
+  <div class="message">
+    {{message.content}}
+  </div>
+  <div class="timeform">
+    <i class="fa fa-clock-o" aria-hidden="true"></i> <span class="timestamp">at {{message.timestamp | date : 'dd/MM/yyyy' }}</span>
+  </div>
+</li> -->
+
+<li class="list-group-item">
+    
+    <!-- <div class="message">
+      {{message.content}}
+    </div> -->
+
+    <div *ngFor="let option of message.content">
+
+      <div *ngIf="option.question">
+        <input type="button" value="{{option.question}}" class="btn" name="{{option.sno}}" (click)="getResponse(option.sno)">
+      </div>
+
+      <div *ngIf="option.name">
+        <table>
+          <tr>
+            <td>Model:</td>
+            <td>{{option.name}}</td>
+          </tr>
+          <tr>
+            <td>Brand:</td>
+            <td>{{option.brand}}</td>
+          </tr>
+          <tr>
+            <td>Size:</td>
+            <td>{{option.size}}</td>
+          </tr>
+          <tr>
+            <td>type:</td>
+            <td>{{option.type}}</td>
+          </tr>
+        </table>
+        <nav>
+            <a [routerLink]="['/query', option.name]">Interested to know more?</a>
+        </nav>
+        
+      </div>
+      
+    </div>
+
+    <!-- <app-response-individual-options *ngFor="let option of message.content" [message_choice]="option"></app-response-individual-options> -->
+    <div class="timeform">
+      <i class="fa fa-clock-o" aria-hidden="true"></i> <span class="timestamp"> {{message.timestamp | date: 'dd/MM/yyyy' }}</span>
+    </div>
+
+    <div> 
+      <a class="previous-link" (click)="goBack()">Back</a>
+    </div>
+    
+</li>

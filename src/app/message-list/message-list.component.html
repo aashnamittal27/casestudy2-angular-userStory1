@@ -1,0 +1,15 @@
+<!-- <div class="chatlist" #chatlist>
+    <ul class="list-group">
+      <message-item *ngFor="let msg of messages" [message]="msg"></message-item>
+    </ul>
+</div> -->
+
+
+<div class="chatlist" #chatlist>
+  <ul class="list-group">
+    <div *ngFor="let msg of messages">
+
+    <app-message-item  [message]="msg" (response)="onGetResponse($event)" (previous)="onBackClick()"></app-message-item>
+  </div>
+  </ul>
+</div>

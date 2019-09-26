@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'casestudy2-angular-newchatbot'`, () => {
+  it(`should have as title 'casestudy2-angular'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('casestudy2-angular-newchatbot');
+    expect(app.title).toEqual('casestudy2-angular');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('casestudy2-angular-newchatbot app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('casestudy2-angular app is running!');
   });
 });
