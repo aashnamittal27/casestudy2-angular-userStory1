@@ -1,0 +1,37 @@
+<p></p>
+
+<div>
+        <table border="1">
+            <tr>
+                <th>User ID</th>
+                <th>User Name</th>
+                <th>User Contact</th>
+                <th>User Email</th>
+                <th>Monitor Id</th>
+                <th>Monitor Name</th>
+                <th>Monitor Brand</th>
+                <th>Monitor Size</th>
+                <th>Monitor Type</th>
+                <th>Date</th>
+            </tr>
+
+            <div ng-show="Sales.length > 0">
+            <tr *ngFor="let interest of Sales">
+              
+                  <td>{{interest.user.id}}</td>
+                  <td>{{interest.user.name}}</td>
+                  <td>{{interest.user.contactNo}}</td>
+                  <td>{{interest.user.email}}</td>
+                  <td>{{option.monitor.id}}</td>
+                  <td>{{option.monitor.name}}</td>
+                  <td>{{option.monitor.brand}}</td>
+                  <td>{{option.monitor.size}}</td>
+                  <td>{{option.monitor.type}}</td>
+                  <td>{{option.date}}</td>
+                
+            </tr>
+        </div>
+                
+        </table>
+
+</div>

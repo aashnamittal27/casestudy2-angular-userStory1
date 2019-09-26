@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'casestudy2-angular';
+  visible = true;
+
+  public setVisibility() {
+    this.visible = false;
+  }
 }

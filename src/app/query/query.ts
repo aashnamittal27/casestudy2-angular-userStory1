@@ -1,4 +1,4 @@
-export class query {
+export class Query {
     user: {
         name: string,
         contactNo: string,

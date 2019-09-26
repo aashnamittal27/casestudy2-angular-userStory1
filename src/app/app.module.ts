@@ -12,6 +12,8 @@ import { InputFieldComponent } from './input-field/input-field.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ResponseIndividualOptionsComponent } from './response-individual-options/response-individual-options.component';
 import { QueryComponent } from './query/query.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SalesComponent } from './sales/sales.component';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,15 @@ import { QueryComponent } from './query/query.component';
     ChatAreaComponent,
     InputFieldComponent,
     ResponseIndividualOptionsComponent,
-    QueryComponent
+    QueryComponent,
+    SalesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

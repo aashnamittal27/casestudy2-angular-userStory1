@@ -17,9 +17,5 @@ export class ChatServiceService {
     console.log(idx);
     console.log('http://localhost:8080/api/startUp/'+arguements);
     return this.http.get('http://localhost:8080/api/startUp/'+arguements);
-  }
-  // public getStartUpOptions(option1:number):Observable<any>
-  // {
-  //   return this.http.get('http://localhost:8080/api/startUp/'+option1);
-  // }
+  } 
 }
